@@ -26,5 +26,6 @@ then replace origin with this
 replace $log_dir to your own log dir;
 
 4) browser http://localhost/path/to/log/day
+
 first it will show exception, because log file is not exists, then add error to log.
 refresh , it should show the page.
