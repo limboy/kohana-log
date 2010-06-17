@@ -1,6 +1,6 @@
 Kohana's built in log is a bit weak , so I rewrite myself.
 
-!(http://farm5.static.flickr.com/4043/4709236594_3334031e69.jpg)
+![screenshot](http://farm5.static.flickr.com/4043/4709236594_3334031e69.jpg)
 
 Usage:
 ======
