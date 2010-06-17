@@ -10,12 +10,12 @@ Usage:
 2) in bootstrap.php 
 
 add log to Kohana::modules
-Kohana::modules(array(
-	'auth' => MODPATH.'auth',
-	'cache' => MODPATH.'cache',
-	//...
-	'log' => MODPATH.'log',
-));
+	Kohana::modules(array(
+		'auth' => MODPATH.'auth',
+		'cache' => MODPATH.'cache',
+		//...
+		'log' => MODPATH.'log',
+	));
 
 then replace origin with this
 	Kohana::$log->attach(new Log_Writer_File(VARPATH.'log'));
