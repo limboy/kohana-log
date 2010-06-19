@@ -22,7 +22,6 @@ $(function(){
 		<tr>
 			<th>time</th>
 			<th>type</th>
-			<th>script</th>
 			<th>message</th>
 			<th>client</th>
 			<th>uri</th>
@@ -36,8 +35,6 @@ $(function(){
 foreach ($logs as $log) 
 {
 	//$time = date::fuzzy_span(strtotime($log['time']));
-	$script = str_replace(';','<br />', $log['script']);
-	//$script = text::limit_chars($log['script'], 50);
 	$message = text::limit_chars($log['message'], 50);
 	$agent = text::limit_chars($log['agent'], 50);
 	$referer = $log['referer'] == '""'?'':text::limit_chars($log['referer'], 50);
@@ -56,7 +53,6 @@ foreach ($logs as $log)
 	<tr>
 		<td>{$log['time']}</td>
 		<td style="background:{$color}">{$log['type']}</td>
-		<td title="{$log['script']}">$script</td>
 		<td title="{$log['message']}">$message</td>
 		<td>{$log['client']}</td>
 		<td>{$log['uri']}</td>

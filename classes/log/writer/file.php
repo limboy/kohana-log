@@ -33,6 +33,8 @@ class Log_Writer_File extends Kohana_Log_Writer {
 	{
 		$return = $message['time'].' ';
 		$return .= '['.$message['type'].'] ';
+
+		/* it is hard to archive in current version
 		$script = '';
 		foreach(debug_backtrace() as $debug_info) {
 			if(!empty($debug_info['file']))
@@ -54,6 +56,7 @@ class Log_Writer_File extends Kohana_Log_Writer {
 			}
 		}
 		$return .= 'script: "'.rtrim($script,"; ").'" ';
+		//*/
 
 		$body = $message['body'];
 		if(!(is_string($body))) {
